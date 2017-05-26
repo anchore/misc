@@ -1,5 +1,8 @@
 
-1. Tracking comments
+1. Error handling
+Currently the code is very _optimistic_
+
+2. Tracking comments
 
 Ideally we'd include the text from the Debian security tracker to provide a reason why the entry was added.
 For example looking at the follow extract:
@@ -17,7 +20,7 @@ For example looking at the follow extract:
 Adding the text would allow a user to understand why the whitelist entry was added.
 
 
-2. Handling multiple CVEs against different packages
+3. Handling multiple CVEs against different packages
 
 It's possible that the same CVE may affect multiple packages and a _nodsa_ may not be noted on all versions.
 This complicates CVE whitelist handling since we may need to support CVE + Package.
