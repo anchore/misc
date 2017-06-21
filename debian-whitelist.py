@@ -8,7 +8,7 @@ import uuid
 url = "https://security-tracker.debian.org/tracker/data/json"
 header = "# Whitelist created at " + strftime("%Y-%m-%d %H:%M:%S\n", gmtime())
 filetime = strftime("%Y%m%d%H%M%S", gmtime())
-debianreleases = ['jessie', 'stretch', 'wheezy']
+debianreleases = ['jessie', 'stretch', 'wheezy', 'buster']
 suffix = ".json"
 whitelist = {}
 
