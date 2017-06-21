@@ -30,3 +30,6 @@ CVE, source, binary
 eg.
 CVE-2016-1234 linux *
 which would whitelist any binary package built from linux source package with that CVE.
+
+
+Alternatively we add the nodsa data as an attribute of the specific CVEs

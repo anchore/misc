@@ -6,7 +6,7 @@ from time import gmtime, strftime
 import uuid
 
 url = "https://security-tracker.debian.org/tracker/data/json"
-header = "# Whitelist created at " + strftime("%Y-%m-%d %H:%M:%S\n", gmtime())
+header = "Whitelist created at " + strftime("%Y-%m-%d %H:%M:%S", gmtime())
 filetime = strftime("%Y%m%d%H%M%S", gmtime())
 debianreleases = ['jessie', 'stretch', 'wheezy', 'buster']
 suffix = ".json"
@@ -49,6 +49,7 @@ for release in debianreleases:
     for uniq_cve in whitelist[release]['cves']:
         whitelist[release]['items'].append(addWhitelist(uniq_cve))
     del whitelist[release]['cves']
-    f = open (release + "-" + filetime + suffix, 'w')
-    f.write(json.dumps(whitelist[release]))
-    f.close()
+    if len(whitelist[release]['items']) > 0:
+        f = open (release + "-" + filetime + suffix, 'w')
+        f.write(json.dumps(whitelist[release]))
+        f.close()
