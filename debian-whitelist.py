@@ -23,7 +23,7 @@ def addWhitelist(cve_id):
 
 for release in debianreleases:
     whitelist[release] = {}
-    whitelist[release]['version'] = "1.0"
+    whitelist[release]['version'] = "1_0"
     whitelist[release]['id'] = str(uuid.uuid4())
     whitelist[release]['name'] = "CVE whitelist for " + release
     whitelist[release]['comment'] = header
