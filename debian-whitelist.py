@@ -17,7 +17,7 @@ def addWhitelist(cve_id):
     whitelist_entry = {}
     whitelist_entry['gate'] = 'ANCHORESEC'
     whitelist_entry['id'] = str(uuid.uuid4())
-    whitelist_entry['trigger_id'] = cve_id
+    whitelist_entry['trigger_id'] = cve_id + "+*"
     return whitelist_entry
 
 
